@@ -1,0 +1,15 @@
+.doctors-section{
+    background-color: #F5FBFF;
+    padding: 80px 0;
+    
+    
+}
+.card-bg{
+    background-color: #EDF4FA;
+    box-shadow: -2px -2px 5px 10px #EBF2FA
+
+    ;
+}
+.dr-img{
+    height: 15rem;
+}

@@ -1,0 +1,44 @@
+.footer{
+    background-color: rgb(15, 15, 35);
+    
+}
+.icon span{
+    padding: 10px ;
+    
+    color: #4AA8FD;
+    font-size: 30px;
+}
+.item-title{
+    font-size: 25px;
+    color: white;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.footer-items p{
+    color: white;
+}
+.footer-items ul{
+    list-style: none;
+    padding: 0;
+
+}
+.footer-items ul li{
+    padding-bottom: 16px;
+    margin: 0;
+}
+.footer-items ul li a{
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+.footer-brand{
+    font-size:  25px !important;
+    color: #4AA8FD;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: bold;
+}

@@ -1,0 +1,47 @@
+.logo-iamge{
+    height: 4rem;
+    width:4rem ;
+
+}
+
+.navbar-align a {
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600 !important;
+    padding-left: 20px;
+    
+}
+.navbar-align a:hover{
+    border-bottom: 2px solid rgb(52, 172, 219);
+}
+.navbar-align li{
+    padding-left: 20px;
+}
+.logo-text{
+    color: rgb(52, 172, 219);
+    font-size: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+
+}
+
+.nav-button-uniqe{
+    font-size: 17px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    color: #4AA8FD;
+    border  : 1px solid #4AA8FD;
+    background-color: #fff;
+    outline: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+.nav-button-uniqe:hover{
+    border  : 1px solid #fff;
+    background-color: #4AA8FD;
+    color: #fff;
+}
+.socail-login-button{
+    width: 2rem;
+    height: 2rem;
+}

@@ -1,0 +1,86 @@
+
+.banner-section{
+    background-image: url('./banner-bg-1.jpg');
+    height: 80vh;
+    width: 100%;
+    padding-top: 8rem ;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.banner-section h2{
+    color: black;
+}
+
+
+.Health-button{
+    font-size: 17px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    color: #fff;
+    border  : 1px solid #4AA8FD;
+    background-color: #4AA8FD;
+    outline: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    
+
+}
+.Health-button:hover{
+    border  : 1px solid #4AA8FD;
+    background-color: #fff;
+    color: #4AA8FD;
+    transition: 0.2s;
+}
+.banner-head{
+    font-size: 4.5rem ;
+    font-weight: 800;
+    color: #1F1F1F;
+}
+.banner-head-2{
+    font-size: 4.5rem ;
+    font-weight: 400;
+    
+    color: #1F1F1F;
+}
+#emargency-section{
+        background-color: #83C4FF;
+}
+.ema-srv-icon{
+    color: white;
+    font-size: 50px;
+}
+.ema-srv-title{
+    font-size: 2.5rem ;
+    font-weight: 600;
+    color: #fff;
+    padding: 10px 0;
+    
+}
+.ema-srv-description{
+    color: #fff;
+    padding-bottom: 10px;
+}
+.ema-health-button{
+
+    font-size: 17px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    color: #fff;
+    border  : 1px solid #fff;
+    background-color: #83C4FF;
+    outline: none;
+    border-radius: 5px;
+    padding: 15px 30px;
+    
+}
+.ema-health-button:hover{
+    border  : 1px solid #4AA8FD;
+    background-color: #fff;
+    color: #4AA8FD;
+    transition: 0.2s;
+}
+.emargency-section-middle-bd{
+    background-color: #4AA8FD;
+}
