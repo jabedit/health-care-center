@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {Link ,useLocation, useHistory} from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 import google  from './google.png';
@@ -11,24 +11,79 @@ import github  from './github.png';
 
 
 const Login = () => {
-    const {handleLogin, handleEmailField, handlePasswordField, error , signInUsingGoogle,
-        singInUsingGithub } = useAuth();
+    
+
+    const {loginEmailAndPassword, error , signInUsingGoogle,
+        singInUsingGithub , setUser, setError , setIsLoading } = useAuth();
         const location = useLocation();
         const history = useHistory();
         const redirect_url = location.state?.from || '/home';
+        
+        
+        const [email, setEmail] = useState('');
+        const [password, setPassword] = useState('');
+
+        const handleEmailField = e =>{
+            setEmail(e.target.value)
+        }
+        const handlePasswordField = e =>{
+            setPassword(e.target.value)
+        }
+
+     const handleLogin = (e) =>{
+        e.preventDefault();
+        loginEmailAndPassword(email, password)
+        .then(result => {
+            // Signed in 
+            setUser(result.user);
+            history.push(redirect_url)
+          })
+          .catch((error) => {
+            
+            setError(error.message);
+            
+            
+          })
+          .finally(()=>{
+            setIsLoading(false)
+          });
+        
+     }
       const handleGoogleLogin = () =>{
         signInUsingGoogle()
-        .then( result =>{
+        .then(result => {
+            setIsLoading(true);
+            setUser(result.user);
             history.push(redirect_url)
-        })
+          })
+          .catch((error) => {
+            
+            setError(error.message);
+            
+            
+          })
+          .finally(()=>{
+            setIsLoading(false)
+          });
         
       }  
 
       const handleGithubLogin = () =>{
           singInUsingGithub()
-          .then(result =>{
+          .then(result => {
+            setIsLoading(true);
+            setUser(result.user);
             history.push(redirect_url)
-        })
+          })
+          .catch((error) => {
+            
+            setError(error.message);
+            
+            
+          })
+          .finally(()=>{
+            setIsLoading(false)
+          });
         
       }
     return (

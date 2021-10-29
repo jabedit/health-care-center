@@ -13,7 +13,7 @@ const UniqueDr = (props) => {
                 <div className="card-body">
                     <h5 className="card-title">{name}</h5>
                     <p className="card-text">{expart}</p>
-                    <Link href="#" className="btn Health-button">Book Now</Link>
+                    <Link href="#" className="btn Health-button"><i class="fas fa-calendar-check"></i> Book Now</Link>
                 </div>  
             </div>
         </div>

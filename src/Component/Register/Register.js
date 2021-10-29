@@ -1,12 +1,54 @@
 import React, { useState } from 'react';
-import {Link} from 'react-router-dom';
+import {Link, useLocation, useHistory} from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 
 
 
 
 const Register = () => {
-    const {handleRegistration, handleEmailField,handlePasswordField, handleNameField,  error , } = useAuth();
+    const {creteAccountWithGoogle, updateName, error , setUser ,setError, setIsLoading } = useAuth();
+    const location = useLocation();
+    const history = useHistory();
+    const redirect_url = location.state?.from || '/home';
+
+
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [name, setName] = useState('');
+    
+
+    const handleEmailField = e =>{
+       
+        setEmail(e.target.value)
+    }
+    const handlePasswordField = e =>{
+        setPassword(e.target.value)
+    }
+    const handleNameField =  e =>{
+        setName(e.target.value)
+    }
+
+
+    const handleRegistration = e =>{
+        e.preventDefault();
+        creteAccountWithGoogle(email, password)
+        .then(result =>{
+            setIsLoading(true);
+            updateName(name)
+            history.push(redirect_url);
+            setUser(result.user);
+            
+          })
+          .catch((error) => {
+            
+            setError(error.message);
+          })
+          
+          .finally(()=>{
+            setIsLoading(false)
+          });
+        }
+    
     return (
         <div className='container py-5'>
         

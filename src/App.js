@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+
 import './App.css';
 import Navbar from './Component/Header/Navbar';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
@@ -10,7 +10,7 @@ import Register from './Component/Register/Register';
 import Login from './Component/Login/Login';
 import AuthUseProvider from './context/AuthUseProvers';
 import PrivateRoute from './Component/private/PrivateRoute';
-import Department from './Component/Pages/Department/Department';
+
 import NotFound from './Component/Pages/Notfound/NotFound';
 import ServiceDescription from './Component/Pages/ServiceDescrip/ServiceDescription';
 import Contact from './Component/Pages/Contact/Contact';
@@ -28,9 +28,9 @@ function App() {
                 <Route exact path="/home">
                   <Home></Home>
                 </Route>
-                <PrivateRoute exact path="/departments">
+                <Route exact path="/departments">
                     <Departments></Departments>
-                </PrivateRoute>
+                </Route>
                 <PrivateRoute exact  path="/doctor">
                   
                   <Dorctor></Dorctor>
@@ -45,9 +45,9 @@ function App() {
                 <Route exact  path="/login">
                   <Login></Login>
                 </Route>
-                <Route path="/servdescription/:id">
+                <PrivateRoute path="/servdescription/:id">
                     <ServiceDescription></ServiceDescription>
-                </Route>
+                </PrivateRoute>
                 <Route path='*'>
                    <NotFound></NotFound>
                 </Route>

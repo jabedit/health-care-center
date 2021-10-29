@@ -1,9 +1,10 @@
 
 .banner-section{
     background-image: url('./banner-bg-1.jpg');
-    height: 80vh;
+    height: 85vh;
     width: 100%;
     padding-top: 8rem ;
+    padding-bottom: 1rem;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -84,3 +85,34 @@
 .emargency-section-middle-bd{
     background-color: #4AA8FD;
 }
+.choseUs-icon{
+    font-size: 100px;
+    padding-right: 10px;
+    
+}
+.chose-bg{
+    background-color: #39a0fa91;
+}
+.choses-img{
+    width: 100%;
+    height: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+    .banner-section{
+        background-image: url('./banner-bg-1.jpg');
+        height: auto;
+        width: 100%;
+        padding-top: 8rem ;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    
+    }
+    .banner-head-2{
+        font-size: 2.5rem ;
+        font-weight: 400;
+        
+        color: #1F1F1F;
+    }
+  }
